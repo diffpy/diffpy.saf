@@ -7,7 +7,8 @@ def main():
     parser = argparse.ArgumentParser(
         prog="diffpy.saf",
         description=(
-            "Tool for extracting signals with specific rotational symmetries from noisy data at scale\n\n"
+            "Tool for extracting signals with specific rotational symmetries "
+            "from noisy data at scale\n\n"
             "For more information, visit: "
             "https://github.com/diffpy/diffpy.saf/"
         ),

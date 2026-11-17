@@ -10,21 +10,25 @@
     :undoc-members:
     :show-inheritance:
 
-Subpackages
------------
-
-.. toctree::
-   diffpy.saf.example_package
-
 Submodules
 ----------
 
-|module|
---------
+|filters|
+---------
 
-.. |module| replace:: diffpy.saf.example_submodule module
+.. |filters| replace:: diffpy.saf.filters module
 
-.. automodule:: diffpy.saf.example_submodule
+.. automodule:: diffpy.saf.filters
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+|ratchet_model|
+---------------
+
+.. |ratchet_model| replace:: diffpy.saf.ratchet_model module
+
+.. automodule:: diffpy.saf.ratchet_model
     :members:
     :undoc-members:
     :show-inheritance:
