@@ -1,14 +1,15 @@
 import argparse
+from importlib.metadata import metadata
 
 from diffpy.saf.version import __version__  # noqa
 
 
 def main():
+    package_description = metadata("diffpy.saf")["Summary"]
     parser = argparse.ArgumentParser(
         prog="diffpy.saf",
         description=(
-            "Tool for extracting signals with specific rotational symmetries "
-            "from noisy data at scale\n\n"
+            f"{package_description}\n\n"
             "For more information, visit: "
             "https://github.com/diffpy/diffpy.saf/"
         ),

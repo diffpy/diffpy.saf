@@ -4,7 +4,11 @@
 
 .. |title| replace:: diffpy.saf documentation
 
-``diffpy.saf`` - Tool for extracting signals with specific rotational symmetries from noisy data at scale
+``diffpy.saf`` - |description|
+
+.. include:: ../../README.rst
+   :start-after: .. long-description-start
+   :end-before: .. long-description-end
 
 | Software version |release|
 | Last updated |today|.

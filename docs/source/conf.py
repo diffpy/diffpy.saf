@@ -15,6 +15,7 @@
 
 import sys
 import time
+import tomllib
 from importlib.metadata import version
 from pathlib import Path
 
@@ -23,6 +24,12 @@ try:
     fullversion = version("diffpy.saf")
 except Exception:
     fullversion = "No version found. The correct version will appear in the released version."  # noqa: E501
+
+# Read the package description from pyproject.toml, its single source.
+pyproject_path = Path(__file__).resolve().parents[2] / "pyproject.toml"
+with pyproject_path.open("rb") as pyproject_file:
+    description = tomllib.load(pyproject_file)["project"]["description"]
+rst_epilog = f".. |description| replace:: {description}"
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -300,7 +307,7 @@ texinfo_documents = [
         "diffpy.saf Documentation",
         ab_authors,
         "diffpy.saf",
-        "One line description of project.",
+        description,
         "Miscellaneous",
     ),
 ]
