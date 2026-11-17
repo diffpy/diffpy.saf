@@ -12,7 +12,8 @@
 # See LICENSE.rst for license information.
 #
 ##############################################################################
-"""Tool for extracting signals with specific rotational symmetries from noisy data at scale"""
+"""Tool for extracting signals with specific rotational symmetries from
+noisy data at scale."""
 
 # package version
 from diffpy.saf.version import __version__  # noqa

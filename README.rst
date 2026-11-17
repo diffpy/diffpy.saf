@@ -38,7 +38,25 @@
 
 Tool for extracting signals with specific rotational symmetries from noisy data at scale
 
-* LONGER DESCRIPTION HERE
+.. long-description-start
+
+``diffpy.saf`` finds the orientation angles of signals with n-fold
+rotational symmetry in 2D data, such as diffraction patterns. It builds
+symmetry adapted filters (SAFs), angular filters with the same n-fold
+symmetry as the signal, and finds the angle at which each image overlaps
+most strongly with the filter.
+
+The package provides two main classes:
+
+* ``SymmetryAdaptedFilter`` builds a SAF and a matching angular mask for
+  any n-fold symmetry, angular resolution, and image shape.
+* ``RatchetModel`` tracks the orientation angles of up to two signals
+  through a stack of images, such as a rotating sample. Each image is
+  searched starting from the angles found in the previous image, so the
+  angles accumulate as the sample rotates instead of wrapping back into
+  one symmetry period.
+
+.. long-description-end
 
 For more information about the diffpy.saf library, please consult our `online documentation <https://diffpy.github.io/diffpy.saf>`_.
 
@@ -82,7 +100,7 @@ and run the following ::
 
 This package also provides command-line utilities. To check the software has been installed correctly, type ::
 
-        diffpy.saf --version
+        diffpy-saf --version
 
 You can also type the following command to verify the installation. ::
 
@@ -91,7 +109,7 @@ You can also type the following command to verify the installation. ::
 
 To view the basic usage and available commands, type ::
 
-        diffpy.saf -h
+        diffpy-saf -h
 
 Getting Started
 ---------------
